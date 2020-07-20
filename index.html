@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Storage Library
+        </title>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#3e3e79">
+        <script defer src="js/vue.min.js"></script>
+        <script defer src="js/vue-router.min.js"></script>
+        <script defer src="js/util.js"></script>
+        <script defer src="js/components.vue.js"></script>
+        <script defer src="js/localdb.min.js"></script>
+        <script defer src="js/views/home.js"></script>
+        <script defer src="js/views/viewpost.js"></script>
+        <script defer src="js/views/notfound.js"></script>
+        <script defer src="js/views/editpost.js"></script>
+        <script defer src="js/views/about.js"></script>
+        <script defer src="js/views/edithistory.js"></script>
+        <script defer src="js/routes.js"></script>
+        <script defer src="js/app.js"></script>
+    </head>
+
+    <body>
+        <div id="main">
+            <!-- <div class="wrapper"> -->
+                <header class="header"> 
+                    <!-- Header -->
+                    <div class="topnav" id="headerNav">
+                        <div class="home-link">
+                            <router-link to="/home" tag="a" exact> Home </router-link>
+                        </div>
+                        <div class="other-link">
+                            <router-link tag="a" to='/about' exact>About</router-link>
+                        </div>
+                    </div>
+                </header>
+            <!-- </div> -->
+            <router-view :key="$route.fullPath" class="h-content-center"></router-view>
+            <footer class="footer center"> &copy;  <span id="date_time"> </span>&nbsp;&nbsp; Fritzdultimate (Darlington)</footer>
+        </div>
+
+        <script>
+            let date = new Date();
+            let currentDate = 2020;
+            if(date.getFullYear() > currentDate) {
+                date_time.innerHTML = currentDate + ' - ' + date.getFullYear();
+            } else {
+                date_time.innerHTML = currentDate;
+            }
+        </script>
+        </body>
