@@ -55,7 +55,7 @@ let About = {
                     </p>
 
                     <p>
-                        As you can see, <code class="emphasis">localStorage</code> is now more than just storing a string, you can now turn it into a local database, :D actually, its for client use only. Your database can only be accessed by you only, or the person using your browser on the same device. 
+                        As you can see, <code class="emphasis">localStorage</code> is now more than just storing a string, you can now turn it into a local database, 😁😁 actually, its for client use only. Your database can only be accessed by you only, or the person using your browser on the same device. 
                     </p>
 
                     <p>
