@@ -5,6 +5,12 @@ let NotFound = {
         }
     },
 
+    methods : {
+        goBack(para) {
+            this.$router.go(para);
+        }
+    },
+
     created() {
         document.title = '404 - Not Found';
     },
