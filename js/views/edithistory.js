@@ -19,8 +19,9 @@ let EditHistory = {
         delete query[0]['body'];
         let obj_v  = Object.values(query[0]);
         let posts = obj_v.map((el) => JSON.parse(el));
-        this.posts = posts[0].reverse();
-        this.dates = posts[1].reverse();
+        this.posts = posts[0];
+        this.dates = posts[1];
+        this.dates = this.dates.reverse();
         // 
         
 
