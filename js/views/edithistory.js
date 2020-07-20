@@ -14,7 +14,7 @@ let EditHistory = {
         this.postId = this.$route.params.id;
         let query = db.from('blog_posts')
                       .where(['id', this.postId])
-                      .select(['edited_posts', 'edited_on', 'body']).orderBy('id', 'desc').getAll();
+                      .select(['edited_posts', 'edited_on', 'body']).orderBy('edited_on', 'desc').getAll();
         this.postBody = query[0]['body'];
         delete query[0]['body'];
         let obj_v  = Object.values(query[0]);
