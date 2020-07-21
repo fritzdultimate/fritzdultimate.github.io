@@ -84,7 +84,7 @@ let homeUtils = {
                         const reader2 = new FileReader();
                         reader2.readAsDataURL(newFile);
                         reader2.addEventListener('loadend', function(el){
-                            that.postPicture = event.target.result;
+                            that.postPicture = el.target.result;
                         });
                     }, 'image/jpeg', 0.2);
                 });
